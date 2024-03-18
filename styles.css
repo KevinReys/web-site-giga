@@ -1,0 +1,673 @@
+/* INÍCIO: corpo geral */
+body {
+    background-image: url('background/indigo-blue-background_53876-160655.jpg');
+    background-size: 100%; /* Ajusta a imagem de fundo */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+* Overlay semi-transparente */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Cor preta com 50% de transparência */
+}
+
+/* Media query para tornar os itens responsivos */
+@media screen and (max-width: 768px) {
+    /* Ajustes para a imagem de fundo em dispositivos menores */
+    body {
+        background-size: contain; /* Ajusta a imagem de fundo para caber na tela */
+    }
+    
+    /* Ajustes para o overlay em dispositivos menores */
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de transparência */
+    }
+}
+/* FIM: corpo geral */
+
+
+
+
+
+
+
+
+
+
+
+/* INÍCIO: BARRA DE PESQUISA */
+.search-form {
+    position: absolute; /* Posiciona a barra de pesquisa de forma absoluta */
+    left: 160px; /* Distância do lado esquerdo da barra de navegação */
+    top: 30px; /* Distância do topo da barra de navegação */
+  }
+  
+  .search-form input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none; /* Remove a borda ao focar */
+    width: 150px; /* Largura da barra */
+  }
+  
+  .search-form button {
+    padding: 8px 12px;
+    background-color: #5c6e81; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s; /* Transição suave de cor */
+  }
+  
+  .search-form button:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+  }
+
+  /* Media query BARRA DE PESQUISA para tornar os itens responsivos */
+@media screen and (max-width: 768px) {
+    .search-form {
+      position: relative; /* Altera a posição para relativa */
+      left: auto; /* Remove a distância do lado esquerdo */
+      top: auto; /* Remove a distância do topo */
+      margin-bottom: 20px; /* Adiciona margem inferior */
+      text-align: center; /* Centraliza os itens */
+    }
+  
+    .search-form input[type="text"] {
+      width: 100%; /* Define a largura como 100% para ocupar todo o espaço disponível */
+    }
+  }
+
+/* TÉRMINO: BARRA DE PESQUISA */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*NAVBAR do top*/
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1e1e;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 80px; /* Tamanho do logotipo GIGA360 navbar */
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Alinha os itens ao centro */
+}
+
+nav ul li {
+    display: inline;
+    
+}
+
+nav ul li a {  /* Itens da barra de navegação*/
+    text-decoration: none;
+    color: #FFA500; /* Laranja */
+    padding: 10px 15px;  /* Alinhamento dos itens na navbar */
+    
+}
+
+nav ul li a:hover {
+    background-color: #3a3838;
+    transition: background-color 0.5s; /* Transição suave de cor */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+/* Media query NAVBAR para tornar os itens responsivos */
+@media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Altera a direção do flex para coluna */
+      padding: 20px 10px; /* Ajusta o preenchimento */
+    }
+  
+    .logo img {
+      width: 100px; /* Ajusta o tamanho do logotipo */
+      margin-bottom: 20px; /* Adiciona margem inferior ao logotipo */
+    }
+  
+    nav ul {
+      text-align: center; /* Alinha os itens ao centro */
+    }
+  
+    nav ul li {
+      display: block; /* Altera para bloco para ocupar toda a largura */
+      margin-bottom: 10px; /* Adiciona margem inferior entre os itens */
+    }
+  
+    nav ul li a {
+      display: block; /* Altera para bloco para ocupar toda a largura */
+      padding: 10px; /* Ajusta o preenchimento */
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INÍCIO: CARROSSEL */
+.carrossel {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    overflow: hidden;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha no topo da página */
+    height: 100vh; /* Faz com que a seção ocupe toda a altura da viewport */
+}
+
+img{
+    object-fit: cover;
+    height: 250px;
+    width: 200px;
+    border-radius: 20px; /* Arredonda as bordas dos CARDS */
+    margin: 10px; /* Adiciona uma margem de 10 pixels ao redor dos CARDS */
+}
+
+
+img:hover{ /* Efeito dos CARDS */
+   transform: scale(1.20);
+   transition: .6s;
+}
+
+h3 {
+    color: #FFA500;
+}
+
+.center-text {
+    text-align: center;
+}
+/* Media query para tornar os itens responsivos */
+@media screen and (max-width: 768px) {
+    /* Ajustes para o tamanho das imagens */
+    img {
+      height: 150px;
+      width: 120px;
+    }
+  
+    /* Ajustes para o tamanho do texto */
+    h3 {
+      font-size: medium;
+    }
+  }
+/* FIM: CARROSSEL */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INÍCIO: AULA EXPERIMENTAL BOTÃO */
+.aulaexp {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.agende {
+    width: 300px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Permite definir largura e altura */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+/* Media query AGENDE para tornar os itens responsivos */
+@media screen and (max-width: 768px) {
+    .agende {
+      width: 100%; /* Define a largura da imagem como 100% para ocupar toda a largura do contêiner pai */
+      max-width: 300px; /* Define a largura máxima da imagem para evitar que ela fique muito grande em dispositivos de tela grande */
+    }
+  }
+/* FIM: AULA EXPERIMENTAL BOTÃO */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* INÍCIO: Estilos para os cards dentro da classe "profs" */
+ 
+ .profs .content {
+    max-width: 900px; /* Define a largura máxima dos cards */
+    margin: 0 auto; /* Centraliza os cards horizontalmente */
+}
+
+ .profs .content figure {
+    display: inline-block;
+    margin: 10px; /* Adiciona um espaçamento entre os cards */
+    width: 200px; /* Define a largura dos cards */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.profs .content figure img {
+    width: 100%; /* Garante que a imagem preencha todo o espaço disponível dentro do card */
+    border-radius: 10px; /* Adiciona bordas arredondadas aos cards */
+}
+
+.profs .content figure figcaption {
+    color: #FFA500;
+    margin-top: 5px; /* Adiciona um espaçamento entre a imagem e a legenda */
+}
+
+.profs .content h3 {
+    background-color: #202022; /* Define a cor de fundo */
+    color: #FFA500;
+    text-align: center; /* Centraliza o conteúdo */
+}
+/* Media query para tornar os itens responsivos */
+@media screen and (max-width: 768px) {
+    /* Ajustes para a largura dos cards */
+    .profs .content figure {
+      width: 100%; /* Define a largura dos cards como 100% para ocupar todo o espaço disponível */
+    }
+  
+    /* Ajustes para a margem entre os cards */
+    .profs .content figure {
+      margin: 10px 0; /* Adiciona um espaçamento entre os cards */
+    }
+  }
+
+/* FIM: ESTILO DAS NOSSAS ESPECIALIDADES */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ACADEMIA */
+.academia {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    background-color: #202022; /* Define a cor de fundo */
+}
+
+/* Estilos para o título */
+.academia h3 {
+    margin-bottom: 10px; /* Adiciona uma margem inferior ao título */
+    color: #FFA500; /* Define a cor do título */
+}
+
+/* Estilos para o parágrafo */
+.academia p {
+    margin: 0; /* Remove as margens padrão */
+    color: #FFA500; /* Define a cor do texto */
+}
+
+/* Media query para tornar os itens responsivos */
+@media screen and (max-width: 768px) {
+    /* Ajustes para o tamanho do texto em dispositivos menores */
+    .academia h3 {
+        font-size: 1.2em; /* Ajusta o tamanho do título */
+    }
+
+    .academia p {
+        font-size: 0.9em; /* Ajusta o tamanho do texto */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INCIO: Horarios */
+.horarios .cont {
+    color: #FFA500;
+}
+
+/* FIM: Horarios */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INÍCIO: PLANOS */
+.planos .content {
+    max-width: 900px; /* Define a largura máxima dos cards */
+    margin: 0 auto; /* Centraliza os cards horizontalmente */
+}
+
+.planos .content figure {
+    display: inline-block;
+    margin: 10px 10px; /* Adiciona um espaçamento entre os cards (5px na parte superior e inferior, 10px nas laterais) */
+    margin-bottom: -300px;
+    width: 400px; /* Define a largura dos cards */
+    height: 400px; /* Define a altura dos cards */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.planos .content figure img {
+    width: 100%; /* Garante que a imagem preencha todo o espaço disponível dentro do card */
+    border-radius: 10px; /* Adiciona bordas arredondadas aos cards */
+}
+
+.planos .content figure figcaption {
+    color: #FFA500;
+    margin-top: 5px; /* Adiciona um espaçamento entre a imagem e a legenda */
+}
+
+.planos .content h3 { /* Nossos planos */
+    
+    color: #FFA500;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.planos .content h2 { /* confira abaixo todos os nossos planos */
+    color: #FFA500;
+}
+
+.planos .content figure:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do card em 10% */
+}
+/* Media query para tornar os itens responsivos */
+@media screen and (max-width: 768px) {
+    /* Ajustes para a largura dos cards */
+    .planos .content figure {
+      width: 100%; /* Define a largura dos cards como 100% para ocupar todo o espaço disponível */
+      height: auto; /* Define a altura automática para manter a proporção */
+    }
+  }
+/* FIM: PLANOS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INÍCIO: code of FAQ */
+.faq-list {
+    list-style: none;
+    padding-left: 0;
+    
+}
+
+.faq-list dt { /* pergunta */
+    color: #FFA500;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-list dd { /* resposta */
+    color: #fff;
+    display: none;
+}
+/* Media query para tornar os itens responsivos */
+@media screen and (max-width: 768px) {
+    /* Ajustes para a cor dos textos em dispositivos menores */
+    .horarios .cont,
+    .faq-list dt,
+    .faq-list dd {
+        color: #ffffff; /* Altera a cor dos textos para branco em dispositivos menores */
+    }
+
+    /* Ajustes para o peso da fonte das perguntas em dispositivos menores */
+    .faq-list dt {
+        font-weight: normal;
+    }
+}
+/* END OF code FAQ */
+
+
+
+
+
+
+
+
+/* INICIO: ICONES DENTRO DO RODAPÉ FINAL */
+.whatsapp-icon {
+    position: absolute;
+    bottom: -13px; /* Ajusta a distância do ícone do WhatsApp ao rodapé */
+    left: 50px; /* Ajusta a distância do ícone do WhatsApp à esquerda */
+    width: 200px; /* Ajusta a largura do ícone do WhatsApp */
+    height: auto;
+}
+
+.igfb {
+    position: absolute;
+    bottom: 10px; /* Distância do rodapé */
+    right: 40px; /* Distância da direita */
+}
+
+.igfb a { 
+    display: inline-block; /* Certifica-se de que os links fiquem em linha */
+    margin-left: -10px; /* Adiciona um espaço entre os ícones */
+}
+
+.igfb img {
+    width: 60px; /* Define a largura dos ícones */
+    height: auto; /* Permite que a altura seja ajustada automaticamente */
+}
+
+/* Media queries para tornar a página responsiva */
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    nav {
+        margin-top: 20px;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+/* FIM: ICONES DENTRO DO RODAPÉ FINAL */
+
+
+
+/* INÍCIO: RODAPÉ GERAL*/
+footer { 
+    background-color: #131312; /* Laranja */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 94%;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {  /* Parágrafos do rodapé */
+    font-size: 15px;  /* Numero de telefone e endereço */
+    color: rgb(235, 213, 15);
+    font-family: sans-serif;
+}
+
+footer p strong {
+    font-size: inherit; /* Mantém o tamanho da fonte do elemento strong igual ao tamanho do parágrafo */
+}
+
+h1 { /* NOSSAS ESPECIALIDADES */
+    color:  #ffa600fb;
+    font-size: xx-large;
+    text-align: center;
+}
+/* Media query para tornar os itens responsivos */
+@media screen and (max-width: 768px) {
+    footer {
+      width: 100%; /* Define a largura como 100% para ocupar toda a largura da tela */
+    }
+  
+    h1 {
+      font-size: large; /* Ajusta o tamanho do título para dispositivos menores */
+    }
+  }
+/* FIM: RODAPÉ GERAL*/
+
+
+
+
+
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+  }
+  
+  .slides img {
+    width: 50%;
+    height: auto;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }

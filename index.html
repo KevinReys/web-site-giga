@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia GiGa 360</title>
+<link rel="stylesheet" href="styles.css"> <!--CSS-->
+<scrip src="script.js"></scrip> <!--JavaScript-->
+
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="img_icons/gigalogo.jpeg" alt="GiGa 360">
+        </div>
+        <nav> <!--NAVBAR-->
+            <ul> <!--Lista não ordenada-->
+                <li> <!--Listas-->
+                    <form class="search-form" action="/search" method="GET">
+                      <input type="text" name="q" placeholder="Pesquisar...">
+                      <button type="submit">Buscar</button>
+                    </form>
+                  </li>
+                <li><a href="#home"><strong>HOME</strong></a></li>
+                <li><a href="#sobre"><strong>SOBRE NÓS</strong></a></li>
+                <li><a href="#horarios"><strong>HORÁRIOS</strong></a></li>
+                <li><a href="#planos"><strong>PLANOS</strong></a></li>
+                <li><a href="#faq"><strong>FAQ</strong></a></li>
+                <li><a href="Portaldoaluno/portal_home.html"><strong>PORTAL DO ALUNO</strong></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+     
+<!--MODALIDADES-->
+    <h1>MODALIDADES</h1>
+   <section>
+        <div class="carrossel">
+            <div class="containerU" id="img">
+                <img src="img-modalidades/musculacao.jpeg" alt="Musculação">
+                <img src="img-modalidades/boxe.jpeg" alt="Boxe">
+                <img src="img-modalidades/muay.jpeg" alt="Muay Thai">
+                <img src="img-modalidades/judokids.jpeg" alt="Judo Kids">
+                <br><br>
+                <h3>
+                    <p class="center-text">Fale conosco pelo WhatsApp e marque uma aula experimental</p>
+                </h3>
+                <div class="aulaexp">
+                <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" target="_blank">
+                    <img class="agende" src="img_icons/agendeaulaexp.png" alt="aulaexp">
+                </a>
+            </div> <!--end of DIV aulaexp.-->
+            </div> <!--end of DIV Carrossel-->
+        </div> <!--end of DIV Container-->
+   </section>
+
+
+ <!--SOBRE NÓS - NOSSOS PROFESSORES-->
+ <div class="profs">
+ <div id="sobre" class="content">
+    <h1>SOBRE NÓS</h1>
+    <h3>NOSSOS PROFESSORES</h3>
+    <p></p>
+    
+    <figure> <!--abertura da TAG figure-->
+    <figcaption><strong></strong></figcaption>
+    <img src="IMG_Profs/Gabi.jpg" alt="Gabi">
+    </figure><!--Fechamento da TAG figure-->
+
+    <figure> <!--abertura da TAG figure-->
+    <figcaption><strong></strong></figcaption>
+    <img src="IMG_Profs/Gio.jpg" alt="Gio">
+    </figure><!--Fechamento da TAG figure-->
+    
+    <figure> <!--abertura da TAG figure-->
+    <figcaption><strong></strong></figcaption>
+    <img src="IMG_Profs/My.jpg" alt="Mylene">
+    </figure><!--Fechamento da TAG figure-->
+    
+    <figure> <!--abertura da TAG figure-->
+    <figcaption><strong></strong></figcaption>
+    <img src="IMG_Profs/sherok.jpg" alt="Sherocky">
+    </figure><!--Fechamento da TAG figure-->
+</div> <!--Fechamento da div class e ID-->
+</div> <!--Fechamento da div profis-->
+<br><br><br><br><br><br><br><br><br>
+
+
+<div class="academia">
+    <h3>A ACADEMIA</h3>
+    <p>(51) 99368-3811
+R. Cristóvão Colombo, 124 - Niterói, Canoas/RS</p>
+</div>
+
+
+<div class="slider">
+    <div class="slides">
+      <img src="imgs_gym_giga/giga01.jpg" alt="Imagem 1">
+      <img src="imgs_gym_giga/giga02.jpg" alt="Imagem 2">
+      <img src="imgs_gym_giga/giga03.jpg" alt="Imagem 3">
+      <img src="imgs_gym_giga/giga04.jpg" alt="Imagem 1">
+      <img src="imgs_gym_giga/giga05.jpg" alt="Imagem 2">
+      <img src="imgs_gym_giga/giga06.jpg" alt="Imagem 3">
+      <img src="imgs_gym_giga/giga07.jpg" alt="Imagem 1">
+      <img src="imgs_gym_giga/giga08.jpg" alt="Imagem 2">
+      <img src="imgs_gym_giga/giga09.jpg" alt="Imagem 3">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+
+
+
+<script>
+    const slides = document.querySelector('.slides');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+let slideIndex = 0;
+
+prevButton.addEventListener('click', () => {
+  slideIndex = (slideIndex - 1 + slides.children.length) % slides.children.length;
+  updateSlider();
+});
+
+nextButton.addEventListener('click', () => {
+  slideIndex = (slideIndex + 1) % slides.children.length;
+  updateSlider();
+});
+
+function updateSlider() {
+  slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--HORÁRIOS DE FUNCIONAMENTO-->
+<div class="horarios">
+<div id="horarios" class="cont">
+    <br><br>
+    <h1>HORÁRIOS DE FUNCIONAMENTO</h1>
+    <br>
+    <h2>
+        <p class="center-text">SEGUNDA Á SEXTA</p>
+        <p class="center-text">06:00 ás 13:00 e das 15:00 ás 21:30</p>
+        <br>
+        <p class="center-text">SÁBADOS E FERIADOS</p>
+        <h3 class="center-text">09:00 ás 12:00</h3>
+    </h2>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!--PLANOS-->
+<div class="planos">
+<div id="planos" class="content">
+    <h1>NOSSOS PLANOS</h1>
+    <h2 class="center-text">Confira abaixo todos os nossos planos:</h2>
+
+    <figure> <!--abertura da TAG figure-->
+        <figcaption><strong></strong></figcaption>
+        <img src="planos/1.jpg" alt="Mensal">
+        </figure><!--Fechamento da TAG figure-->
+    
+        <figure> <!--abertura da TAG figure-->
+        <figcaption><strong></strong></figcaption>
+        <img src="planos/2.jpg" alt="Trimestral">
+        </figure><!--Fechamento da TAG figure-->
+       
+        <figure> <!--abertura da TAG figure-->
+        <figcaption><strong></strong></figcaption>
+        <img src="planos/3.jpg" alt="Semestral">
+        </figure><!--Fechamento da TAG figure-->
+        
+        <figure> <!--abertura da TAG figure-->
+        <figcaption><strong></strong></figcaption>
+        <img src="planos/4.jpg" alt="Anual">
+        </figure><!--Fechamento da TAG figure-->
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--FAQ-->
+<div id="faq" class="content">
+    <h1>FAQ - PERGUNTAS FREQUENTES</h1>
+    <dl class="faq-list">
+        <dt>Como me inscrever em uma aula experimental?</dt>
+        <dd>Para se inscrever em uma aula experimental, basta entrar em contato conosco pelo telefone ou visitar nossa academia pessoalmente.</dd>
+        
+        <dt>Qual é o horário de funcionamento da academia?</dt>
+        <dd>O horário de funcionamento da academia é das 6h às 22h, de segunda a sábado, e das 8h às 14h aos domingos.</dd>
+
+        <dt>A academia abre nos feriados?</dt>
+        <dd>Resposta...</dd>
+        
+        <dt>Quais são as formas de pagamento aceitas?</dt>
+        <dd>Aceitamos pagamentos em dinheiro, cartão de crédito e débito.</dd>
+        
+        <dt>Tenho personal particular, posso leva-lo na academia?</dt>
+        <dd>Resposta...</dd>
+        
+        <dt>Qual a taxa que meu personal paga?</dt>
+        <dd>Resposta...</dd>
+
+        <dt>A Academia aceita GymPass?</dt>
+        <dd>Resposta...</dd>
+   </dl>
+</div>
+    </dl>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.faq-list dt').click(function(){
+        $(this).next('dd').slideToggle();
+    });
+});
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!--CODE JAVASCRIPT dos PROFs-->
+  <script>
+    // Função para rolar suavemente para a seção correspondente ao clicar em um link do navbar
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        const offsetTop = targetSection.offsetTop;
+  
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+<!--END OF CODE JAVASCRIPT dos PROFs-->
+
+
+
+    
+     <footer> <!--Rodapé-->
+        <p><strong>(51) 99368-3811</strong></p>
+        <p><strong>R. Cristóvão Colombo, 124 - Niterói, Canoas/RS</strong></p>
+
+        <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" target="_blank">
+            <img class="whatsapp-icon" src="img_icons/logowhats.png" alt="WhatsApp">
+        </a>
+        
+
+
+    <div class="igfb">
+        <a href="https://www.instagram.com/360giga/" target="_blank">
+            <img src="img_icons/ig_logo.png" alt="Instagram">
+        </a>
+         <a href="https://www.facebook.com/AcademiaGiga360/" target="_blank">
+            <img src="img_icons/fb_logo.png" alt="Facebook">
+        </a>
+    </div>
+     </footer> <!--End of code Rodapé-->
+</main>
+</body>
+</html>
